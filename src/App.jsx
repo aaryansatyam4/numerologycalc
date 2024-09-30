@@ -23,7 +23,7 @@ function App() {
       const value = letterValues[letter.toLowerCase()] || 0;
       wordSum += value;
     });
-    // Reduce the word sum (e.g., 19 -> 1 + 9 = 10 -> 1 + 0 = 1)
+   
     while (wordSum > 9) {
       wordSum = String(wordSum).split("").reduce((a, b) => a + parseInt(b), 0);
     }
