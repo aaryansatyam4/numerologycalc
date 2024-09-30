@@ -1,22 +1,58 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
 .container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
   text-align: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
 }
 
 input {
-  padding: 10px;
+  width: 80%;
+  padding: 15px;
   font-size: 16px;
-  margin-right: 10px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #45a049;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   background-color: #4CAF50;
   color: white;
   border: none;
-  cursor: pointer;
+  border-radius: 5px;
   font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -27,16 +63,97 @@ button:hover {
   margin-top: 30px;
 }
 
-h2, h3 {
+h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #666;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
 }
 
 li {
-  font-size: 18px;
-  margin: 5px 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+h2, h3, p {
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px;
+  }
 }
